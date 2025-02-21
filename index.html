@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./style.css"></script>
+    <script src="./script.js"></script>
 </head>
 <body>
     <header>
         <div class="navbar">
             <div class="logo">
+                <img src="/assets/logo-full.png" alt="logo">
             </div>
                 <nav>
                     <ul>
@@ -21,10 +22,37 @@
                     </ul>
                 </nav>
                 <div class="login">
-                    <a href="#">Login</a>
-                    <button>Request a demo</button>
+                    <button class="loginButton"><a href="#">Login</a></button>
+                    <button class="reqDemo" >Request a demo</button>
                 </div> 
         </div>
     </header>
+    <body>
+        <div class="imgSlider">
+            <div class="bgImage">
+                <img src="/assets/banner1.png" alt="banner1">
+            </div>
+            <div class="bgImage">
+                <img src="/assets/banner2.png" alt="banner2">
+            </div>
+            <div class="bgImage">
+                <img src="/assets/banner3.png" alt="banner3">
+            </div>
+            <div class="text">
+                <div class="headingText">    
+                    <h1>Get instant cash flow with invoice factoring</h1>
+                    <h4>Why wait? Get same day funding and a faster way to access cash flow.</h3>
+                </div>
+                <button>Get Started</button>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="dotComponent">
+                        <span class="dot active" onclick="changeSlide(1)"></span>
+                        <span class="dot" onclick="changeSlide(2)"></span>
+                        <span class="dot" onclick="changeSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </body>
 </body>
 </html>
