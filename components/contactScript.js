@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let message = document.getElementById('message').value.trim();
             let honeypot = document.getElementById('honeypot').value;
 
+            //form validation
             if (honeypot !== "") {
                 alert("Spam detected!");
                 return;

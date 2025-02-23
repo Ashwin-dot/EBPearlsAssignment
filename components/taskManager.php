@@ -3,15 +3,6 @@ include 'lib/functions.php';
 $tasks = getTasks($conn);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Manager</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
 <div class="task-main-container">
     <div class="task-text">
         <h1>Task Manager</h1>
@@ -44,6 +35,4 @@ $tasks = getTasks($conn);
         </form>
     </div>
 </div>
-<script src="path/to/your/script.js"></script> <!-- Add the path to your script -->
-</body>
-</html>
+

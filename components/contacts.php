@@ -1,8 +1,6 @@
 <?php
-// Initialize $response as an empty array
+//Cotact Form
 $response = ["success" => false, "message" => ""];
-
-// Include necessary files and libraries
 include __DIR__ . '/../db/connection.php';
 require __DIR__ . '/../vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
@@ -15,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = trim($_POST['message']);
     $honeypot = $_POST['honeypot'];
 
-    // Check if honeypot is filled (bot detected)
+    // Check if honeypot is filled 
     if (!empty($honeypot)) {
         $response['message'] = "Spam detected!";
         error_log("Spam detected in honeypot field.");
@@ -29,28 +27,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $response['message'] = "Invalid phone number! Enter a 10-digit number.";
         error_log("Invalid phone number: " . $phone);
     } else {
-        // Save to Database
+        //saving in database
         $stmt = $conn->prepare("INSERT INTO contacts (name, email, phone, message) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssss", $name, $email, $phone, $message);
 
+        // Send Email Notification using PHPMailer
         if ($stmt->execute()) {
-            // Send Email Notification using PHPMailer
             $mail = new PHPMailer(true);
             try {
-                // Server settings
+                
                 $mail->isSMTP();
-                $mail->Host = 'smtp.gmail.com'; // Set the SMTP server to send through
+                $mail->Host = 'smtp.gmail.com'; 
                 $mail->SMTPAuth = true;
-                $mail->Username = 'khatiwadaashwin5@gmail.com'; // SMTP username
-                $mail->Password = 'npkv xwxs kecf huxj'; // SMTP password
+                $mail->Username = 'khatiwadaashwin5@gmail.com'; 
+                $mail->Password = 'npkv xwxs kecf huxj'; 
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port = 587;
 
-                // Recipients
+              
                 $mail->setFrom($email, $name);
-                $mail->addAddress('khatiwadaashwin5@gmail.com'); // Add a recipient
+                $mail->addAddress('khatiwadaashwin5@gmail.com'); 
 
-                // Content
+          
                 $mail->isHTML(true);
                 $mail->Subject = 'New Contact Form Submission';
                 $mail->Body    = "Name: $name<br>Email: $email<br>Phone: $phone<br>Message:<br>$message";
@@ -70,8 +68,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Ensure $response is always returned as JSON
-// echo json_encode($response);
 ?>
 
 
@@ -104,7 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="text" id="phone" name="phone" placeholder="Your Best Contact Number" required>
         <textarea id="message" name="message" placeholder="Business or Company Name" style="padding: 70px" required></textarea>
 
-        <!-- Honeypot Field (Hidden Field to Detect Bots) -->
+      
         <input type="text" id="honeypot" name="honeypot" style="display: none;">
 
         <button type="submit">submit</button>
