@@ -1,20 +1,30 @@
+Task 1
+Steps for making home page with html, css, js , php 
 
 
+Step 1: Folder Structure 
+Step 2: Download php, mysql , vscode
+Step 3: Setup mysql and php 
+        Download php and setup manually or download xampp for easy acess
+        Download mysql for database connection for more interaction with GUI download dbGate too.
+        Add php extension in VS Code
+Step 4: create index.php and connect a database
+            remember: In php.ini 
+                        change extension_dir = "C:\Program Files\php\ext"
+                        remove semicolon ; from extension=mysqli
 
+Step 5: create lib folder and navbar.html 
+         write a code to add navbar 
 
+step 6: Create image slider 
+        add script.js and code to add image slider 
 
-<!-- -- CREATE TABLE outsource_payments (
---     id INT AUTO_INCREMENT PRIMARY KEY,
---     icon VARCHAR(255) NOT NULL,
---     title VARCHAR(255) NOT NULL,
---     description TEXT NOT NULL
--- ); -->
+step 7: Create Footer in lib folder 
+        add fotter in index.php
 
-<!-- INSERT INTO outsource_payments (icon, title, description) VALUES
-('earth.png', 'Access up to $100,000', 'We fund each invoice once approved and collect payment to optimise your cash flow.*'),
-('earth.png', 'You choose invoices to get paid', 'Self-serve online portal available 24/7 or connect from your CRM or invoicing platform.​'),
-('earth.png', 'Simple pricing', 'Only pay for what you use, if you don’t need us, there are no costs.​'),
-('earth.png', 'Click and quick', 'We fund each invoice once approved and collect payment to optimise your cash flow.*'),
-('earth.png', 'Flexible', 'Self-serve online portal available 24/7 or connect from your CRM or invoicing platform'),
-('earth.png', 'Invest in your business', 'Only pay for what you use, if you don’t need us, there are no costs.​')
-; -->
+step 8: Create a database and add table and values 
+
+step 9:create outsource section and fetch a data from database using fetch_assoc
+
+Task 2
+Task Manager 

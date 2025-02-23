@@ -198,4 +198,318 @@ align-items: center;
     color: #616161;
 }
 
+.task-main-container{
+    background-color: #F1F0FF;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 50px;
+}
+.task-text{
+    padding-top: 80px;
+    text-align: center;
+    margin: 20px;
+}
 
+.task-text h1{
+    text-align: center;
+    margin: 20px;
+    color: #4532FC;
+    font-size: 70px;
+    font-weight: 800;
+}
+
+.task-text h4{
+    text-align: center;
+    margin: 20px;
+    color: #616161;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+
+
+/* .task-list {
+    padding: 200px;
+} */
+
+.task-list ul {
+    list-style: square;
+    padding: 20px;
+}
+
+.task-list li {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 20px;
+    list-style: square;
+    font-size: 14px;
+    
+}
+.task-list a{
+    text-decoration: none;
+    color: #857ebe;
+    font-size: 20px;
+    font-weight: 500;
+}
+.task-checkbox {
+    margin-right: 10px;
+}
+
+/* .task-container button {
+    
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+} */
+
+
+.task-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Task Manager Heading */
+.task-container  h1 {
+    font-size: 24px;
+    color: #4A00E0;
+    margin-bottom: 20px;
+}
+
+/* Form */
+.task-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.task-form button{
+    max-width: 100px;
+    padding: 10px;
+}
+
+.task-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 12px;
+    outline: none;
+}
+
+.task-button {
+    background-color: #4A00E0;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.task-button:hover {
+    background-color: #3700b3;
+}
+
+/* Task List */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.task-item {
+    background: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Task Actions */
+.task-actions button {
+    border: #c82333;
+    border-width: 2px;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.task-checkbox {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Change color of the checkbox when it's checked */
+.task-checkbox:checked {
+    background-color: #4CAF50; /* Green when checked */
+    border-color: #4CAF50; /* Green border */
+}
+/* Complete Button */
+.complete-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.complete-btn:hover {
+    background-color: #218838;
+}
+
+/* Completed Label */
+.completed-label {
+    background-color: #ccc;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Delete Button */
+.delete-btn {
+    color: #dc3545;
+    
+    border-color: #dc3545 ;
+
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    color: white;
+}
+
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    max-width: 800px; 
+    margin: auto; 
+    padding: 20px; 
+
+}
+
+.contact-text h1{
+    font-size:70px ;
+    font-weight: 800;
+    color: #4532FC;
+
+}
+.contact-text h4{
+    font-size: 18px ;
+    font-weight: 400;
+    color: #616161;
+    line-height: 32px;
+    margin-bottom: 50px;
+
+}
+.contact-container input, textarea { 
+    width: 100%; 
+    padding: 20px; 
+    margin: 10px 0;
+     border: 1px solid #ccc; 
+     border-radius: 20px;
+}
+.contact-container button { 
+    width: 195px; 
+    padding: 10px; 
+    background: #4532FC; 
+    color: white; 
+    border-radius: 1px solid rgb(231, 230, 230);
+    border-radius: 20px;
+      cursor: pointer; 
+}
+.contact-container button:hover { 
+    background: #218838; 
+}
+.success { 
+    color: green; 
+    text-align: center; 
+    margin-bottom: 10px; 
+}
+.error { 
+    color: red; 
+    text-align: center; 
+    margin-bottom: 10px; 
+}
+
+footer{
+    margin-top: 30px;
+    background: #F1F0FF;
+    display: flex;
+    flex-direction: column;
+}
+.footer-area{
+    display: flex;
+    flex-direction: row;
+    padding: 80px 200px;  
+    gap:70px
+}
+.footer-text{
+max-width: 540px;
+}
+.footer-text p{
+font-weight: 400;
+color: #616161;
+ font-size: 14px;
+ line-height: 22px;
+}
+.footer-area li{
+    list-style: none;
+    padding: 10px;
+    color: #121D2D;
+    font-size: 12px;
+    font-weight: 400;
+}
+.footer-area h2{
+
+    padding: 10px;
+    color: #121D2D;
+    font-size: 16px;
+    font-weight: 600;
+}
+.footer-text-area{
+    display: flex;
+    flex-direction: column;
+    margin:20px ;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+footer li{
+  
+    list-style: none;
+    padding: 10px;
+    color: #121D2D;
+    font-size: 12px;
+    font-weight: 400;
+}
+.footer-lower ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 200px;
+ margin-bottom: 30px;
+    
+}

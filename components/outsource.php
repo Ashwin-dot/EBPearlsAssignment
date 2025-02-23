@@ -41,7 +41,7 @@ $result = $conn->query($sql);
         echo "<p>No posts available.</p>";
     }
 
-    $conn->close();
+   
     ?>
     </div>
 

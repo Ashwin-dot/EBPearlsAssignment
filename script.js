@@ -27,5 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.plusSlides = (n) => showSlides(slideIndex + n);
 
     window.changeSlide = (n) => showSlides(n);
-  });
   
+  });
+
